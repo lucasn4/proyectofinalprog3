@@ -1,0 +1,11 @@
+#mapacontenedor{
+    width: 90%;
+    margin: auto;
+}
+#inputmapa{
+    position: relative;
+}
+#btnmapa{
+    position: relative;
+    margin-left: 10px;
+}

@@ -1,0 +1,33 @@
+.carrusel-vertical-1 {
+    animation: looping 10s linear 0s infinite none;
+  }
+  
+  .columna-vertical-1 {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      transparent,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      transparent,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+  }
+  
+  @keyframes looping {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .columna-vertical-1 {
+      width: 100px;
+    }
+  }

@@ -1,0 +1,348 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url('../assets/imagenes/fondoboda.jpg');
+  background-size:100%;
+}
+.bodytono{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.btnreg{
+  font-size:15px;
+  float: left;
+  float: left; /* Hace que el elemento flote a la izquierda dentro de su contenedor */
+  color: white;
+  display: flex;/* Convierte al elemento en un contenedor flexible */
+  justify-content: flex-end; /* Alinea los elementos hijos en el extremo derecho del contenedor flexible */
+  position: relative;
+  border: 2px white solid;
+  border-radius: 10px;
+}
+.btnreg:hover{
+  font-size:17px;
+  float: left;
+  float: left; /* Hace que el elemento flote a la izquierda dentro de su contenedor */
+  color: white;
+  display: flex;/* Convierte al elemento en un contenedor flexible */
+  justify-content: flex-end; /* Alinea los elementos hijos en el extremo derecho del contenedor flexible */
+  position: relative;
+  border: 2px white solid;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.paneltitulo{
+  display: flex;/* Convierte al elemento en un contenedor flexible */
+  justify-content: space-between;/* Distribuye los elementos hijos con el espacio disponible entre ellos */
+  margin-top: 1%;
+  margin-right: 5%;
+}
+.num{
+    margin-left: 2%;
+    font-size:15px;
+    float: left;
+    text-shadow: 1px 1px wheat;
+    color: white;
+    position: relative;
+  }
+  .subtitulo{
+  display: flex;/* Convierte al elemento en un contenedor flexible */
+  justify-content: space-between;/* Distribuye los elementos hijos con el espacio disponible entre ellos */
+  margin-top: 0%;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-decoration: none;
+  border-bottom: 2px white solid;
+  }
+.tituloprinc{
+  color: whitesmoke;
+  position: relative;
+  font-size: 30px;
+}
+.a{
+  text-decoration: none;
+  position: relative;
+}
+.menusubtitulo{
+  position: relative;
+  display: flex;
+}
+ul, ol {
+  list-style:none;
+}
+
+.nav > li {
+  float:left;
+}
+
+.nav li a {
+  color:#fff;
+  text-decoration:none;
+  padding: 0px 12px;
+  display:block;
+}
+
+.nav li a:hover {
+  background-color:#434343;
+}
+
+.nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+
+.nav li:hover > ul {
+  display:block;
+}
+
+.nav li ul li {
+  position:relative;
+}
+
+.nav li ul li ul {
+  right:-140px;
+  top:0px;
+}
+.paginas{
+  color: white;
+  margin-right: 10px;
+}
+.subpaginas{
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.titulover{
+  position: relative;
+  color: white;
+}
+.tablaarayas{
+  position: relative;
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: 2px white solid;
+  border-top: 2px white solid;
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+}
+.columna{
+  position: relative;
+  border-left: 2px white solid;
+  text-align: center;
+  vertical-align: middle;
+}
+#check {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 10%;
+
+}
+#start{
+  position: relative;
+}
+#stop{
+  position: relative;
+}
+#tarea{
+  position: relative;
+}
+
+#mensajeaudioincompleto{
+  color: red;
+  position: relative;
+  display: block;
+}
+#mensajeaudioincompleto2{
+  color: red;
+  position: relative;
+  display: block;
+}
+#contenedor{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea horizontalmente en el centro */
+  justify-content: center; /* Alinea verticalmente en el centro */
+   /* Opcional: ajusta la altura según tu diseño */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos del formulario a la izquierda */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.cajaemail{
+  border-radius: 10px;
+}
+.textoemail{
+  color: white;
+}
+.btnemail{
+  border-radius: 10px;
+}
+#nombres{
+  position: relative;
+  color: white;
+}
+#nombres2{
+  position: relative;
+  color: red;
+}
+/*************************/
+.container{
+    margin-top: 2%;
+}
+.carousel {
+  margin-bottom: 2rem;
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+  .imagencarrusel{
+    height: 85vh;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .bloquetarjetas{
+    background-color: white;
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 2%;
+    display: flex;
+    border: 4px black solid;
+    box-shadow: 1px 1px 30px #A63C3C;
+  }
+  .bloquetarjetas:hover{
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 2%;
+    display: flex;
+    border: 4px black solid;
+  }
+  .tarjeta{
+    margin: 2%;
+    width: 30%;
+    height: 60%;
+    border: 5px lightslategrey solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #594E4D;
+    }
+    .tarjeta:hover{
+      margin: 2%;
+      width: 30%;
+      height: 60%;
+      border: 5px #A63C3C solid;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #594E4D;
+      box-shadow: 1px 1px 30px #A63C3C;
+      }
+    .titulotarjeta{
+        color: black;
+        text-decoration: underline;
+        margin: 2%;
+    }
+    .fototarjeta{
+        margin: 2%;
+        width: 40%;
+        height: 140px;
+        border: 2px black solid;
+        border-radius: 100px;
+        box-shadow: 1px 1px 30px #D99748;
+    }
+    .textotarjeta{
+        color: white;
+        margin: 2%;
+    }
+/*///////////////contenedorjuego//////////////*/
+
+.textocontxjug{
+  display: inline-block;
+}
+
+#cont1{
+  left:380px;
+  position: absolute;
+  object-fit: cover;  
+  z-index: 1;  
+  font-size: 50px;
+  color: darkblue;
+  margin-top: 440px;
+  font-family: sans-serif;
+  text-shadow: -5px -5px 10px darkcyan;
+  display: none;
+}
+#cont2{
+  left:350px;
+  position: absolute;
+  object-fit: cover;  
+  z-index: 1;  
+  font-size: 50px;
+  color: darkblue;
+  margin-top: 435px;
+  font-family: sans-serif;
+  text-shadow: -5px -5px 10px darkcyan;
+  display: none;
+}
+#cont3{
+  margin-left: 260px;
+}
+.totalplayers{
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-bottom: 3%;
+  width: 95%;
+  height: 540px;
+  border: 5px black solid;
+  overflow: hidden;
+}
+
+.jugador{
+  display: inline-block;
+  position: relative;
+  margin: 1%;
+  width: 30%;
+  height: 500px;
+  border: 4px black solid;
+  overflow: hidden;
+  background-color: #4f4f4f;
+}
+
+.botonjug1{
+  width: 130px;
+  height: 100px;
+  position:relative;
+  margin: 40%;
+}
+
+#calle {
+  left: 0px;
+  position: absolute;
+  object-fit: cover;    
+}
+
+#autoprota1{
+  width: 100px;
+  height: 70px;
+  position: absolute;
+}
+#autobot{
+  width: 100px;
+  height: 70px;
+  position: absolute;
+}
