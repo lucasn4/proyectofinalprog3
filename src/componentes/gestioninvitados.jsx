@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/style.css';
-import Paneltitulo from './paneltitulo.jsx';
+import DecoracionFondo from './decoracionfondo.jsx';
 import Subtitulo from './subtitulo.jsx';
 import Trabajoporvoz from './trabajoporvoz.jsx';
 import Mensajewp from './mensajewp.jsx';
@@ -63,12 +63,10 @@ const GestionInvitados = () => {
         `}
       </style>
       <div className='bodytono'></div>
-      <div className='paneltitulo'>
-        <Paneltitulo />
-      </div>
       <div className='subtitulo'>
         <Subtitulo />
       </div>
+      <DecoracionFondo />
       <div>
         <h1 className='titulover'>Invitados</h1>
         <table id='verlugares' className='tablaarayas' style={{ width: "90%" }}>

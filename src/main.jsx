@@ -17,6 +17,7 @@ import Lugares from './componentes/lugares';
 import Verlugares from './componentes/verlugares';
 import Nuevosinvitados from './componentes/nuevosinvitados';
 import Verinvitados from './componentes/gestioninvitados';
+import Paginacomentarios from './componentes/paginacomentarios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/verlugar" element={<Verlugares />} />
         <Route path="/nuevosinvi" element={<Nuevosinvitados />} />
         <Route path="/verinvi" element={<Verinvitados />} />
+        <Route path="/coments" element={<Paginacomentarios />} />
       </Routes>
     </Router>
   </React.StrictMode>,

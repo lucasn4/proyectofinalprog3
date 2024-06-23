@@ -2,12 +2,14 @@ import express from 'express';
 import conectarDB from './config.js';
 import ModelUser from './userModel.js';
 import Invi from './invitados.js';
+import Coment from './comentarios.js';
 import cors from 'cors';
 import { Resend } from 'resend';
 //import bodyParser, { text } from 'body-parser';
 import nodemailer from 'nodemailer';
 const app = express();
 const app2 = express();
+const app3 = express();
 
 app.use(express.json());
 app.use(cors()); // Agregado el middleware cors para permitir solicitudes desde cualquier origen
@@ -15,6 +17,8 @@ app.use(cors()); // Agregado el middleware cors para permitir solicitudes desde 
 app2.use(express.json());
 app2.use(cors()); // Agregado el middleware cors para permitir solicitudes desde cualquier origen
 
+app3.use(express.json());
+app3.use(cors());
 // Middleware para parsear JSON y formularios
 //app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded({ extended: true }));
@@ -64,44 +68,69 @@ app2.get("/register", async (req, res) => {
     }
 });
 
-// Ruta para enviar correos electrónicos usando Resend
-app.post('/send-email', async (req, res) => {
-    
-// Configurar el transporte SMTP para Outlook/Hotmail
-const transporter = nodemailer.createTransport({
-    host: 'smtp-mail.outlook.com',
-    port: 3000,
-    secure: true, // true for 465, false for other ports
-    auth: {
-      user: 'evenix1@outlook.com', // Tu dirección de correo de Outlook/Hotmail
-      pass: 'e9m2l1x5' // Contraseña de tu cuenta de Outlook/Hotmail
-    }
-  });
-  const { from_email, to_emails, subject, html2 } = req.body;
-  
-async function main() {
-    // send mail with defined transport object
-    const info = await transporter.sendMail({
-        from: '"Evenix papu <3" <evenix1@outlook.com>', // sender address
-        to: to_emails, // list of receivers
-        subject: subject, // Subject line
-        text: "Hello world?", // plain text body
-        html: html2, // html body
-      });
-   
-  console.log("Message sent: %s", info.messageId);
-  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
-}
+app.get("/register/precio", async (req, res) => {
+    try { 
+        const rango = req.params.rango;
+    let minPrecio = 0;
+    let maxPrecio = 0;
 
-main().catch(console.error); 
-    
-  });
+    switch (rango) {
+        case '0-100':
+            minPrecio = 0;
+            maxPrecio = 100;
+            break;
+        case '101-200':
+            minPrecio = 101;
+            maxPrecio = 200;
+            break;
+        case '201-300':
+            minPrecio = 201;
+            maxPrecio = 300;
+            break;
+        case '301-400':
+            minPrecio = 301;
+            maxPrecio = 400;
+            break;
+        default:
+            break;
+    }    
+        const documentos = await ModelUser.find({ precio: {$gte: minPrecio, $lte: maxPrecio}});
+        
+    }catch(error){
+        console.error('Error al obtener documentos por rango de precio: ', error);
+        res.status(500).json({success:false,message:"Error al obtener documentos por rango de precio"});
+    }
+});
+
+app3.post("/register", async (req, res) => {
+    try {
+        const { nombre, comentarios } = req.body;
+        const nuevocomentario = new Coment({ nombre, comentarios });
+        await nuevocomentario.save();
+        res.json({ success: true });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error al guardar el comentario' });
+    }
+});
+app3.get("/register", async (req, res) => {
+    try {
+        const documentos = await Coment.find();
+        res.json({ success: true, data: documentos });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: "Error al recuperar datos" });
+    }
+});
 app.listen(3000, () => {
     console.log("El servidor está en el puerto 3000");
 });
 
 app2.listen(3001, () => {
     console.log("El servidor está en el puerto 3001");
+});
+app3.listen(3002, () => {
+    console.log("El servidor está en el puerto 3002");
 });
 
 conectarDB();

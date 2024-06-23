@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/style.css';
 import { Link } from 'react-router-dom';
+import {Microfono, NoMicrofono}  from '../../src/assets/js/imagenes.js';
 
 function Trabajoporvoz(props) {
   const [audioIncompleto, setAudioIncompleto] = useState("");
@@ -37,6 +38,14 @@ function Trabajoporvoz(props) {
     const startRecognition = () => {
       setAudioIncompleto("Forma cargar datos: (Nombre:deluxe) (Ubicación:san martin 1000) (Capacidad:25) (Precio:30000) (Telefono:4123456) FIN");
       setAudioIncompleto2("¡Recuerde brindar todos los datos o podrian no mostrarse todo correctamente!"); 
+      btnStart.style.backgroundColor = 'red';
+      btnStart.style.backgroundImage = `url(${Microfono})`;
+      btnStart.style.display = 'flex';
+      btnStart.style.justifyContent = 'center';
+      btnStart.style.alignItems = 'center';
+      btnStart.style.backgroundRepeat = 'no-repeat';
+      btnStart.style.backgroundSize = 'contain';
+      btnStart.style.backgroundPosition = 'center';
       if (!recognitionActive) {
         recognition = new webkitSpeechRecognition();
         recognition.continuous = true;
@@ -57,6 +66,14 @@ function Trabajoporvoz(props) {
     const stopRecognition = () => {
       setAudioIncompleto("");
       setAudioIncompleto2("");
+      btnStart.style.backgroundColor = '#0f98f8';
+      btnStart.style.backgroundImage = `url(${NoMicrofono})`;
+      btnStart.style.display = 'flex';
+      btnStart.style.justifyContent = 'center';
+      btnStart.style.alignItems = 'center';
+      btnStart.style.backgroundRepeat = 'no-repeat';
+      btnStart.style.backgroundSize = 'contain';
+      btnStart.style.backgroundPosition = 'center';
       if (recognitionActive) {
         recognition.stop();
         recognitionActive =false;
@@ -98,8 +115,8 @@ function Trabajoporvoz(props) {
           var numprecio = arrayconnumeros[1];
           var numtelefono = arrayconnumeros[2]; 
           
-            props.setCapacidad(numcapacidad + " personas");
-            props.setPrecio(numprecio + " pesos");
+            props.setCapacidad(numcapacidad);
+            props.setPrecio(numprecio);
             props.setTelefono(numtelefono);
         }
         // Buscar la cadena corta dentro de la cadena larga
@@ -139,7 +156,7 @@ function Trabajoporvoz(props) {
   return (
     <>
       <div>
-        <button id='start'>start</button>
+        <button id='start'></button>
       </div>
         <label id='mensajeaudioincompleto'>{audioIncompleto}</label>
         <label id='mensajeaudioincompleto2'>{audioIncompleto2}</label>

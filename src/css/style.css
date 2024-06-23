@@ -1,22 +1,81 @@
 body{
-  margin: 0;
-  padding: 0;
-  background-image: url('../assets/imagenes/fondoboda.jpg');
-  background-size:100%;
+       font-size: 14px;
+       font-family: 'Poppins', sans-serif;
+       line-height: 1.80857;
+       font-weight: normal;
 }
-.bodytono{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+.cuadradofondo{
+  position: fixed; /* o 'absolute' dependiendo de tu diseño */
+  left: 100%; /* Centra horizontalmente */
+  top: 0%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 900px; /* Ancho del rombo */
+  height: 900px; /* Alto del rombo */
+  background-color: #0f98f8;
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -1; /* Coloca el rombo detrás de todo lo demás */
+}
+.cuadradofondo2{
+  position: fixed; /* o 'absolute' dependiendo de tu diseño */
+  left: 100%; /* Centra horizontalmente */
+  top: 0%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 1100px; /* Ancho del rombo */
+  height: 1100px; /* Alto del rombo */
+  background-color: rgb(180, 178, 178);
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -2; /* Coloca el rombo detrás de todo lo demás */
+}
+.cuadradochicofondo{
+  position: absolute; /* o 'absolute' dependiendo de tu diseño */
+  left: 0%; /* Centra horizontalmente */
+  top: 81%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 300px; /* Ancho del rombo */
+  height: 300px; /* Alto del rombo */
+  background-color: #0f98f8;
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -1; /* Coloca el rombo detrás de todo lo demás */
+}
+.cuadradofondo3{
+  position: fixed; /* o 'absolute' dependiendo de tu diseño */
+  left: 0%; /* Centra horizontalmente */
+  top: 80%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 800px; /* Ancho del rombo */
+  height: 800px; /* Alto del rombo */
+  background-color: rgb(180, 178, 178);
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -3; /* Coloca el rombo detrás de todo lo demás */
+}
+.cuadradochicofondo2{
+  position: absolute; /* o 'absolute' dependiendo de tu diseño */
+  left: 0%; /* Centra horizontalmente */
+  top: 181%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 300px; /* Ancho del rombo */
+  height: 300px; /* Alto del rombo */
+  background-color: #0f98f8;
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -1; /* Coloca el rombo detrás de todo lo demás */
+}
+.cuadradochicofondo3{
+  position: absolute; /* o 'absolute' dependiendo de tu diseño */
+  left: 0%; /* Centra horizontalmente */
+  top: 275%; /* Centra verticalmente */
+  transform: translate(-50%, -50%) rotate(45deg); /* Rota el cuadrado 45 grados y centra */
+  width: 300px; /* Ancho del rombo */
+  height: 300px; /* Alto del rombo */
+  background-color: #0f98f8;
+  border-radius: 10%; /* Ajusta el valor para darle forma de rombo */
+  z-index: -1; /* Coloca el rombo detrás de todo lo demás */
 }
 .btnreg{
   font-size:15px;
   float: left;
   float: left; /* Hace que el elemento flote a la izquierda dentro de su contenedor */
-  color: white;
+  
+  color: #0f98f8;
   display: flex;/* Convierte al elemento en un contenedor flexible */
   justify-content: flex-end; /* Alinea los elementos hijos en el extremo derecho del contenedor flexible */
   position: relative;
@@ -46,23 +105,25 @@ body{
     margin-left: 2%;
     font-size:15px;
     float: left;
-    text-shadow: 1px 1px wheat;
-    color: white;
+    color: #0f98f8;
     position: relative;
   }
   .subtitulo{
   display: flex;/* Convierte al elemento en un contenedor flexible */
   justify-content: space-between;/* Distribuye los elementos hijos con el espacio disponible entre ellos */
   margin-top: 0%;
-  margin-left: 2%;
   margin-right: 2%;
   text-decoration: none;
   border-bottom: 2px white solid;
   }
 .tituloprinc{
-  color: whitesmoke;
-  position: relative;
-  font-size: 30px;
+  position: fixed;
+  z-index: 1000; /* Ajusta el índice z para que esté encima de otros elementos */
+  color: white;
+  font-size: 60px;
+  line-height: 70px;
+  padding-bottom: 45px;
+  font-weight: bold;
 }
 .a{
   text-decoration: none;
@@ -81,7 +142,7 @@ ul, ol {
 }
 
 .nav li a {
-  color:#fff;
+  color: white;
   text-decoration:none;
   padding: 0px 12px;
   display:block;
@@ -114,13 +175,14 @@ ul, ol {
   margin-right: 10px;
 }
 .subpaginas{
-  color: white;
+  color: #0f98f8;
   margin-right: 10px;
   margin-top: 10px;
 }
 .titulover{
+  margin-top: 20px;
+  color: #0f98f8;
   position: relative;
-  color: white;
 }
 .tablaarayas{
   position: relative;
@@ -146,7 +208,18 @@ ul, ol {
 
 }
 #start{
-  position: relative;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 1000; /* Ajusta el índice z para que esté encima de otros elementos */
+  bottom: 20px; /* Ajusta la distancia desde abajo */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  background-color: #0f98f8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #stop{
   position: relative;
@@ -198,12 +271,435 @@ form {
   position: relative;
   color: red;
 }
+.barrafiltro{
+  position: relative;
+}
+#filtrar{
+  position: relative;
+}
+/** banner section **/
+
+.banner_main {
+     background: url(../images/banner.png);
+     padding: 300px 0px 0px 0px;
+     background-size: auto 78%;
+     background-repeat: no-repeat;
+     min-height: 1150px;
+     background-position: right top;
+}
+
+.text-bg {
+     margin-top: 70px;
+     text-align: left;
+     float: left;
+     max-width: 430px;
+     width: 100%;
+}
+
+.text-bg h1 {
+     color: #0f98f8;
+     font-size: 60px;
+     line-height: 70px;
+     padding-bottom: 45px;
+     font-weight: bold;
+}
+.text-bg h2 {
+     color: #0f98f8;
+     font-size: 60px;
+     line-height: 70px;
+     padding-bottom: 45px;
+     font-weight: bold;
+}
+
+
+.text-bg span {
+     color: #222222;
+     font-weight: 500;
+     font-size: 17px;
+     line-height: 30px;
+     margin-bottom: 30px;
+     display: block;
+}
+
+.ban_track {
+     margin-top: 55px;
+}
+
+.banner_slide {
+     padding: 0 80px;
+}
+
+.ban_track figure {
+     margin: 0;
+}
+
+.transfot {
+     text-align: left;
+}
+
+.transfot span {
+     color: #fff;
+     font-size: 17px;
+}
+
+.transfot h3 {
+     color: #fff;
+     font-size: 23px;
+     line-height: 30px;
+     font-weight: 500;
+     margin-bottom: 16px;
+}
+
+.transfot_form {
+     padding: 0 15px;
+     height: 40px;
+     margin-bottom: 15px;
+     border: #fff solid 1px;
+     font-size: 16px;
+}
+
+.get_now {
+     max-width: 150px;
+     width: 100%;
+     padding: 6px 0;
+     background: #222b3c;
+     color: #fff;
+     font-size: 17px;
+}
+
+.get_now:hover {
+     background-color: #000;
+}
+
+#banner1 .carousel-caption {
+     position: inherit;
+     padding: 0;
+}
+
+#banner1 .carousel-indicators {
+     display: none;
+}
+
+#banner1 .carousel-control-prev,
+#banner1 .carousel-control-next {
+     width: 45px;
+     height: 45px;
+     background: transparent;
+     opacity: 1;
+     font-size: 30px;
+     color: #fff;
+     border-radius: 40px;
+     border: #fff solid 2px;
+}
+
+#banner1 .carousel-control-prev:hover,
+#banner1 .carousel-control-next:hover,
+#banner1 .carousel-control-prev:focus,
+#banner1 .carousel-control-next:focus {
+     background: #000;
+     color: #fff;
+}
+
+#banner1 a.carousel-control-prev {
+     position: absolute;
+     left: inherit;
+     top: 35%;
+     right: 16px;
+}
+
+#banner1 a.carousel-control-next {
+     position: absolute;
+     right: 16px;
+     bottom: 10px;
+     top: 50%;
+}
+
+
+/** end banner section **/
+
+/*-- sidebar  navigation--*/
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #222222;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #0f98f8;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  top: 20px; /* Ajusta la distancia desde abajo */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin-left: 16px;
+}
+#panelfijoarriba{
+background-color: #222222;
+position: fixed;
+z-index: 1000; /* Ajusta el índice z para que esté encima de otros elementos */
+width: 100%;
+height: 70px;
+}
+
+/*--      end sidebar  navigation--*/
+
+.logo {
+  padding-top: 12px;
+}
+
+ul.conat_info li {
+  display: inline-block;
+  padding: 0 26px;
+}
+
+ul.conat_info li a {
+  color: #fff;
+  display: inline-block;
+  font-size: 30px;
+}
+
+ul.conat_info li a:hover {
+  color: #fff;
+}
+
+.right_bottun {
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  padding: 30px 30px;
+  background: transparent;
+  position: absolute;
+  z-index: 999;
+}
+
+
+/** banner section **/
+
+
+/*************************/
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.5; /* Opacidad inicial para destacar el cambio al activo */
+  transition: opacity 0.3s ease;
+}
+
+.section.active {
+  opacity: 1;
+}
+
+/**** testimonios ****/
+#testimonial{
+  overflow: hidden;
+  max-width: 85%;
+  margin:5% 0 0 7.5%;
+  height: 91vh;
+  background-color: #0f98f8;
+  justify-content: center;
+  text-align: center;
+  border: 2px #fff solid;
+  border-radius: 30px;
+}
+#testimonial h2{
+  color: whitesmoke;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
+}
+#testimonial p{
+  color: whitesmoke;
+  font-size: 17px;
+}
+/******** pag comentarios **********/
+
+.tablaarayascoments{
+  position: relative;
+  color: #222222;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-bottom: 2px #222222 solid;
+  border-top: 2px #222222 solid;
+  border-left: 2px #222222 solid;
+  border-right: 2px #222222 solid;
+}
+.columnacoments{
+  position: relative;
+  border-left: 2px #222222 solid;
+  border-top: 2px #222222 solid;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*** footer ***/
+.footer {
+}
+
+ul.location_icon {
+     padding-top: 12px;
+}
+
+ul.location_icon li {
+     font-size: 21px;
+     line-height: 30px;
+     color: #353535;
+     text-align: left;
+     padding-bottom: 35px;
+}
+
+ul.location_icon li a {
+     font-size: 40px;
+     color: #0f98f8;
+     line-height: 40px;
+     padding-right: 16px;
+     float: left;
+}
+
+ul.location_icon li a:hover {
+     color: #353535;
+}
+
+.map {
+     margin-right: -50px;
+}
+
+.map figure {
+     margin: 0;
+}
+
+.map figure img {
+     width: 100%;
+}
+
+.bottom_form {
+     margin-top: 50px;
+     float: left;
+     width: 100%;
+}
+
+.bottom_form h3 {
+     font-weight: 600;
+     font-size: 20px;
+     text-align: left;
+     color: #353535;
+     padding-bottom: 15px;
+}
+
+.bottom_form .enter {
+     border: inherit;
+     padding: 0px 19px;
+     width: 66%;
+     height: 49px;
+     background: #fff;
+     color: #000;
+     font-size: 16px;
+     font-weight: 500;
+     float: left;
+}
+
+.sub_btn {
+     font-size: 16px;
+     transition: ease-in all 0.5s;
+     background-color: #0f98f8;
+     color: #fff;
+     padding: 10px 0px;
+     max-width: 105px;
+     width: 100%;
+     display: block;
+     font-weight: 600;
+     margin-left: 0px;
+}
+
+.sub_btn:hover {
+     background-color: #000;
+     transition: ease-in all 0.5s;
+     color: #fff;
+}
+
+.copyright {
+     background-color: #0f98f8;
+     margin-top: 70px;
+     padding: 20px 0;
+}
+
+.copyright p {
+     color: #fff;
+     font-size: 18px;
+     line-height: 22px;
+     text-align: center;
+     padding-top: 0px;
+     font-weight: normal;
+     padding-right: 0 !important;
+}
+
+.copyright a {
+     color: #fff;
+}
+
+.copyright a:hover {
+     color: #000;
+}
+.iconofooter{
+  float: left;
+}
+#fotofinal{
+  float: right;
+  width: 600px;
+  height: 350px;
+}
+/** end footer **/
+
 /*************************/
 .container{
-    margin-top: 2%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .carousel {
-  margin-bottom: 2rem;
+  width: 90%;
   }
   
   .carousel-item {
@@ -237,21 +733,11 @@ form {
     margin: 2%;
     width: 30%;
     height: 60%;
-    border: 5px lightslategrey solid;
+    border: 5px #222222 solid;
     border-radius: 10px;
     text-align: center;
-    background-color: #594E4D;
+    background-color: #0f98f8;
     }
-    .tarjeta:hover{
-      margin: 2%;
-      width: 30%;
-      height: 60%;
-      border: 5px #A63C3C solid;
-      border-radius: 10px;
-      text-align: center;
-      background-color: #594E4D;
-      box-shadow: 1px 1px 30px #A63C3C;
-      }
     .titulotarjeta{
         color: black;
         text-decoration: underline;
@@ -263,11 +749,19 @@ form {
         height: 140px;
         border: 2px black solid;
         border-radius: 100px;
-        box-shadow: 1px 1px 30px #D99748;
+        box-shadow: 1px 1px 30px #222222;
     }
     .textotarjeta{
         color: white;
         margin: 2%;
+    }
+    .comentarios{
+        margin: 1%;
+        width: 25%;
+    }
+    #btncomentarios{
+      width: 10%;
+      border-radius: 20px;
     }
 /*///////////////contenedorjuego//////////////*/
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/style.css';
-import Paneltitulo from './paneltitulo.jsx';
+import DecoracionCorta from './decoracioncorta.jsx';
 import Subtitulo from './subtitulo.jsx';
 import Trabajoporvoz from './trabajoporvoz.jsx';
 
@@ -53,14 +53,13 @@ export const App = () => {
           `}
         </style>
         <div className='bodytono'></div>
-        <div className='paneltitulo'>
-          <Paneltitulo />
-        </div>
         <div className='subtitulo'>
           <Subtitulo />
         </div>
+        
+  <DecoracionCorta />
         <div>
-            <h1>Agregar Invitados</h1>
+            <h1 className='titulover'>Agregar Invitados</h1>
             <input type='text' placeholder='nombre' className='a'
             value={nombre} onChange={(e) => setNombre(e.target.value)}/>
             <input type='text' placeholder='apellido' className='a'
